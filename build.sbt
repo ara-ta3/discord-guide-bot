@@ -3,16 +3,7 @@ val commonSettings = Seq(
     scalaVersion := "2.12.8",
     conflictManager := ConflictManager.strict,
     scalacOptions ++= Seq(
-        "-deprecation",
-        "-feature",
-        "-unchecked",
-        "-language:implicitConversions",
-        "-Xlint",
-        "-Xfatal-warnings",
-        "-Ywarn-numeric-widen",
-        "-Ywarn-unused",
-        "-Ywarn-unused-import",
-        "-Ywarn-value-discard",
+
     ),
 )
 
@@ -21,6 +12,8 @@ lazy val root = (project in file("."))
   .settings(
       name := "discord build",
       libraryDependencies ++= Seq(
-          "com.discord4j" % "Discord4J" % "2.10.1"
+          "com.discord4j" % "discord4j-core" % "3.0.2",
+          "com.discord4j" % "discord4j-common" % "3.0.2",
+          "com.typesafe" % "config" % "1.3.3"
       )
   )
